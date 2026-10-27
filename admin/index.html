@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | Iron Ridge</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../index.html">IRON RIDGE <span>ADMIN</span></a>
+    <div class="admin-user" id="admin-user" hidden>
+      <span id="user-email"></span>
+      <button class="btn btn-ghost btn-sm" id="logout-btn" type="button">Log out</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container admin-main">
+  <div class="form-msg info show" id="demo-banner" hidden>Demo mode: showing sample data. Connect Supabase in js/config.js to see real requests.</div>
+
+  <!-- Login -->
+  <section id="login-view" hidden>
+    <form class="form login-form" id="login-form">
+      <h1 style="font-size:44px;text-transform:uppercase;grid-column:1/-1">Owner login</h1>
+      <label class="field full">Email<input type="email" name="email" autocomplete="username" required></label>
+      <label class="field full">Password<input type="password" name="password" autocomplete="current-password" required></label>
+      <div class="form-msg error" id="login-error" role="alert"></div>
+      <button class="btn btn-primary" type="submit">Log in</button>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dash-view" hidden>
+    <div class="dash-head">
+      <h1>Dashboard</h1>
+      <label class="field inline">Range
+        <select id="range" class="input">
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="3650">All time</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="dash-grid">
+      <div class="panel">
+        <h2 class="panel-title">Requests per week</h2>
+        <div class="bars" id="weekly"></div>
+      </div>
+      <div class="panel">
+        <h2 class="panel-title">How customers found us</h2>
+        <div class="hbars" id="sources"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="table-head">
+        <h2 class="panel-title">Requests and jobs</h2>
+        <div class="filters">
+          <label class="field inline">Status
+            <select id="status-filter" class="input">
+              <option value="">All</option>
+              <option value="new">New</option>
+              <option value="quoted">Quoted</option>
+              <option value="booked">Booked</option>
+              <option value="completed">Completed</option>
+              <option value="lost">Lost</option>
+            </select>
+          </label>
+          <label class="field inline">Search<input id="search" class="input" type="text" placeholder="Name, phone, address"></label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Received</th><th>Customer</th><th>Service</th><th>Area</th><th>Date wanted</th><th>Status</th><th>Quote</th><th>Final</th><th></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p class="muted" id="empty" hidden>No requests match.</p>
+    </div>
+  </section>
+
+  <!-- Detail drawer -->
+  <dialog id="detail">
+    <form method="dialog" class="detail-close"><button class="btn btn-ghost btn-sm" aria-label="Close">Close</button></form>
+    <div id="detail-body"></div>
+  </dialog>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

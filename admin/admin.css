@@ -1,0 +1,54 @@
+.admin-main { padding-top: 32px; padding-bottom: 64px; }
+.admin-user { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 15px; flex-wrap: wrap; }
+.btn-sm { min-height: 40px; padding: 8px 14px; font-size: 15px; }
+.login-form { max-width: 440px; margin: 48px auto; }
+.dash-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; margin-bottom: 24px; }
+.dash-head h1 { font-size: 52px; text-transform: uppercase; }
+.field.inline { font-size: 14px; color: var(--muted); }
+.field.inline .input { min-height: 44px; padding: 8px 12px; background: var(--bg); border: 1px solid var(--line-strong); color: var(--text); border-radius: 4px; font: inherit; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.kpi { background: var(--surface); border-radius: var(--radius); padding: 18px 20px; border-top: 3px solid var(--accent); }
+.kpi-label { color: var(--muted); font-size: 14px; }
+.kpi-value { font-family: var(--display); font-size: 40px; font-weight: 700; line-height: 1.1; }
+.kpi-sub { color: var(--faint); font-size: 13px; }
+
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.panel { background: var(--surface); border-radius: var(--radius); padding: 22px; margin-bottom: 16px; min-width: 0; }
+.panel-title { font-size: 24px; margin: 0 0 16px; text-transform: none; }
+
+.bars { display: flex; align-items: flex-end; gap: 8px; height: 180px; }
+.bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%; min-width: 0; }
+.bar-fill { width: 100%; max-width: 40px; background: var(--accent); border-radius: 4px 4px 0 0; min-height: 2px; }
+.bar-val { font-size: 13px; color: var(--text-2); }
+.bar-label { font-size: 12px; color: var(--faint); white-space: nowrap; }
+
+.hbars { display: flex; flex-direction: column; gap: 10px; }
+.hbar { display: grid; grid-template-columns: 130px 1fr 36px; gap: 10px; align-items: center; font-size: 15px; }
+.hbar-track { background: var(--bg); border-radius: 4px; height: 14px; overflow: hidden; }
+.hbar-fill { background: var(--accent); height: 100%; }
+.hbar-val { text-align: right; color: var(--text-2); }
+
+.table-head { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: end; margin-bottom: 12px; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 860px; }
+th { text-align: left; color: var(--muted); font-weight: 500; padding: 10px 8px; border-bottom: 1px solid var(--line-strong); }
+td { padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+td .input { min-height: 38px; padding: 6px 8px; background: var(--bg); border: 1px solid var(--line-strong); color: var(--text); border-radius: 4px; font: inherit; width: 100%; }
+td input.input { max-width: 100px; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.pill.new { background: rgba(255,122,47,0.18); color: #FFB48A; }
+
+dialog { background: var(--surface); color: var(--text); border: 1px solid var(--line-strong); border-radius: var(--radius); width: min(720px, 94vw); padding: 28px; }
+dialog::backdrop { background: rgba(0,0,0,0.6); }
+.detail-close { float: right; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 24px; margin: 16px 0; }
+.detail-grid dt { color: var(--muted); font-size: 13px; }
+.detail-grid dd { margin: 0; }
+.detail-edit { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 16px; }
+.photos { display: flex; flex-wrap: wrap; gap: 10px; }
+.photos img { width: 140px; height: 105px; object-fit: cover; border-radius: 4px; border: 1px solid var(--line-strong); }
+.check { display: flex; align-items: center; gap: 8px; min-height: 44px; }
+.check input { width: 20px; height: 20px; }
+.save-note { color: var(--ok); font-size: 14px; min-height: 20px; }

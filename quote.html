@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get a Free Quote | Iron Ridge Hauling Services</title>
+  <meta name="description" content="Request a free junk removal or moving quote from Iron Ridge Hauling Services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- ANALYTICS snippet here -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">IRON RIDGE <span>HAULING</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="index.html#how">How it works</a>
+      <a href="about.html">About</a>
+      <a class="btn btn-primary" href="quote.html" aria-current="page">Get a free quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container quote-layout">
+      <div>
+        <div class="eyebrow">Free quote</div>
+        <h1 style="font-size:clamp(44px,6vw,64px);text-transform:uppercase;margin:12px 0 16px">Tell us what you need</h1>
+        <p class="muted">The more detail and photos you send, the more accurate your quote. We usually reply within [RESPONSE TIME].</p>
+        <p class="muted">Prefer to talk? Call or text <a href="tel:[PHONE]">[PHONE]</a>.</p>
+      </div>
+
+      <form class="form" id="quote-form" novalidate>
+        <div class="form-msg info" id="demo-msg" role="status">Demo mode: this form is not connected yet, so nothing is saved.</div>
+
+        <label class="field">Full name <span class="req" aria-hidden="true">*</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="field">Phone <span class="req" aria-hidden="true">*</span>
+          <input type="tel" name="phone" autocomplete="tel" required>
+        </label>
+        <label class="field">Email
+          <input type="email" name="email" autocomplete="email">
+        </label>
+        <label class="field">Service <span class="req" aria-hidden="true">*</span>
+          <select name="service" required>
+            <option value="">Choose one</option>
+            <option value="junk_removal">Junk removal</option>
+            <option value="moving">Moving help</option>
+            <option value="both">Both</option>
+          </select>
+        </label>
+        <label class="field">Service area <span class="req" aria-hidden="true">*</span>
+          <select name="area" required>
+            <option value="">Choose one</option>
+            <option value="nova">Northern Virginia</option>
+            <option value="blacksburg">Blacksburg area</option>
+          </select>
+        </label>
+        <label class="field">Preferred date
+          <input type="date" name="preferred_date">
+        </label>
+        <label class="field full">Pickup address <span class="req" aria-hidden="true">*</span>
+          <input type="text" name="pickup_address" autocomplete="street-address" required>
+        </label>
+        <label class="field full">Drop off address <small>(moves only)</small>
+          <input type="text" name="dropoff_address">
+        </label>
+        <label class="field full">What are we hauling? <span class="req" aria-hidden="true">*</span>
+          <textarea name="items" required placeholder="Example: 1 sectional couch, 2 mattresses, about 10 boxes"></textarea>
+        </label>
+        <label class="field full">Stairs, elevators or tight spaces?
+          <textarea name="access_notes" placeholder="Example: 3rd floor walk up, narrow stairwell"></textarea>
+        </label>
+        <label class="field">Photos <small>(up to 6)</small>
+          <input type="file" name="photos" accept="image/*" multiple>
+        </label>
+        <label class="field">How did you hear about us?
+          <select name="referral_source">
+            <option value="">Choose one</option>
+            <option value="friend">Friend or family</option>
+            <option value="google">Google</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="flyer">Flyer</option>
+            <option value="repeat">I have used Iron Ridge before</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label class="field">Referral code <small>(optional)</small>
+          <input type="text" name="referral_code">
+        </label>
+
+        <div class="form-msg error" id="form-error" role="alert"></div>
+        <button class="btn btn-primary" type="submit" id="submit-btn">Send my request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© <span data-year></span> Iron Ridge Hauling Services · Founded by Tommy Le</div>
+    <div><a href="mailto:[EMAIL]">[EMAIL]</a> · <a href="tel:[PHONE]">[PHONE]</a> · [SOCIAL LINKS]</div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script type="module" src="js/quote.js"></script>
+</body>
+</html>

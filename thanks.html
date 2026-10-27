@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Received | Iron Ridge Hauling Services</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- ANALYTICS snippet here (count this page as a conversion) -->
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">IRON RIDGE <span>HAULING</span></a>
+  </div>
+</header>
+<main id="main">
+  <section class="section">
+    <div class="container" style="max-width:720px">
+      <div class="eyebrow">Request received</div>
+      <h1 style="font-size:clamp(44px,6vw,72px);text-transform:uppercase;margin:12px 0 20px">Thanks, we got it.</h1>
+      <p class="muted" style="font-size:19px">We will review your photos and details and get back to you with a quote within [RESPONSE TIME].</p>
+      <p class="muted" id="demo-note" hidden>(Demo mode: nothing was actually sent.)</p>
+      <div class="btn-row" style="margin-top:24px">
+        <a class="btn btn-primary" href="index.html">Back to home</a>
+        <a class="btn btn-ghost" href="tel:[PHONE]">Call [PHONE]</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  if (new URLSearchParams(location.search).get("demo")) document.getElementById("demo-note").hidden = false;
+</script>
+</body>
+</html>
